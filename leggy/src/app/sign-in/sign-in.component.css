@@ -1,0 +1,178 @@
+/* Main Container */
+.auth-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: row;
+}
+
+/* Left Section (Image) */
+.left-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Right Section (Login Form) */
+.right-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 30px;
+  min-width: 0;
+}
+
+.auth-wrapper {
+  width: 500px;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* Form Styling */
+.validate-form {
+  width: 100%;
+}
+
+/* Input Fields - Explicitly Stacked Vertically */
+.mat-form-field {
+  width: 100%;
+  display: block;
+  margin-bottom: 25px;
+}
+
+/* Ensure form fields don't align horizontally */
+.example-full-width {
+  width: 100%;
+  display: block;
+}
+
+.mat-form-field-wrapper {
+  padding: 10px;
+}
+
+.mat-input-element {
+  font-size: 16px;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Icons */
+.color-icon,
+.pwd-toggle {
+  cursor: pointer;
+}
+
+/* "Already Registered" Link */
+.d-flex.justify-content-between.align-items-center.mb-5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: nowrap;
+}
+
+/* Register Button */
+.auth-form-btn {
+  width: 100%;
+  height: 55px;
+  border-radius: 10px;
+  background-color: #FF8500 !important;
+  color: white !important;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.auth-form-btn:hover {
+  background-color: #E67300 !important;
+}
+
+/* Social Login Section */
+.social-login-section {
+  margin-top: 20px;
+}
+
+.social-login-title {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.social-login-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 45px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.social-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.google-btn {
+  border-color: #ccc;
+}
+
+.facebook-btn {
+  border-color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .left-section {
+    display: none;
+  }
+
+  .right-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .social-login-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-btn {
+    width: 100%;
+  }
+}
