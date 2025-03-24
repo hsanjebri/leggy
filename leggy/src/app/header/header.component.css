@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap');
+
+/* ✅ General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jost', sans-serif; /* 🔥 Apply Jost font */
+}
+
+
+/* ✅ Top Announcement Bar */
+.top-bar {
+  background-color: #FF8500;  /* Default: Orange */
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* ✅ Default Theme (Orange) */
+.orange-theme .top-bar { background-color: #FF8500 !important; color: white; }
+.orange-theme .navbar { background-color: #F5F5F5 !important; }
+
+/* ✅ Red Theme */
+.red-theme .top-bar { background-color: #C0392B !important; color: white; }
+.red-theme .navbar { background-color: #fff5f5 !important; }
+
+/* ✅ Green Theme */
+.green-theme .top-bar { background-color: #5CAC0E !important; color: white; }
+.green-theme .navbar { background-color: #f5fff5 !important; }
+
+/* ✅ Ensure smooth transitions */
+.top-bar, .navbar {
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+
+/* ✅ Top Links */
+.top-links {
+  display: flex;
+  gap: 15px;
+}
+
+.top-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.top-links a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Language Dropdown */
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 100px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.language-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ✅ Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F5F5F5;  /* ✅ Light Grey Background */
+  padding: 15px 40px;
+  transition: background-color 0.3s ease-in-out; /* 🔥 Smooth transition */
+}
+
+/* ✅ Navbar Background Changes */
+.orange-theme .navbar { background-color: #F5F5F5; }
+.red-theme .navbar { background-color: #fff5f5; }
+.green-theme .navbar { background-color: #f5fff5; }
+
+/* ✅ Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #FF8500;
+}
+
+/* ✅ Menu Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #FF8500;
+}
+
+/* ✅ Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

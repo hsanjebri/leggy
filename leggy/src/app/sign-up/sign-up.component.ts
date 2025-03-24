@@ -37,9 +37,6 @@ export class SignUpComponent
   error = '';
   hide = true;
 
-  //
-  doctor_id :number= -1;
-  patient_id :number= -1;
 
   constructor(
     private formBuilder: UntypedFormBuilder,
@@ -63,46 +60,7 @@ export class SignUpComponent
   }
 
   onSubmit() {
-    // this.submitted = true;
-    // this.loading = true;
-    // this.error = '';
-    // if (this.authForm.invalid) {
-    //   this.error = 'Username and Password not valid !';
-    //   return;
-    // } else {
-    //   //     this.subs.sink = this.authService
-    //   //       .login(this.f['username'].value, this.f['password'].value)
-    //   //       .subscribe({
-    //   //         next: (res) => {
-    //   //           if (res) {
-    //   //             setTimeout(() => {
-    //   //               const role = this.authService.currentUserValue.role;
-    //   //               if (role === Role.All || role === Role.Admin) {
-    //   //                 this.router.navigate(['/admin/dashboard/main']);
-    //   //               } else if (role === Role.Doctor) {
-    //   //                 this.doctor_id = this.authService.currentUserValue.id
-    //   //                 this.router.navigate(['/doctor/dashboard']);
-    //   //               } else if (role === Role.Patient) {
-    //   //                 this.patient_id = this.authService.currentUserValue.id
-    //   //                 this.router.navigate(['/patient/dashboard']);
-    //   //               } else {
-    //   //                 this.router.navigate(['/authentication/signin']);
-    //   //               }
-    //   //               this.loading = false;
-    //   //             }, 1000);
-    //   //           } else {
-    //   //             this.error = 'Invalid Login';
-    //   //           }
-    //   //         },
-    //   //         error: (error) => {
-    //   //           this.error = error;
-    //   //           this.submitted = false;
-    //   //           this.loading = false;
-    //   //         },
-    //   //       });
-    //   //   }
-    //   // }
-    // }
+
   }
 
   loginWithGoogle() {

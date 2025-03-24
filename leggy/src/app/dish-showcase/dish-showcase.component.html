@@ -1,1 +1,137 @@
-<p>dish-showcase works!</p>
+<section class="restaurant-showcase">
+  <h2 class="restaurant-title">Notre <span class="highlight">Meilleur Restaurant</span> Livré à Dakar</h2>
+<br>
+  <br>
+  <br>
+  <br>
+
+  <div class="restaurant-cards">
+    <div class="restaurant-card" *ngFor="let restaurant of restaurants">
+      <div class="restaurant-image-container">
+        <img src="/assets/dotedcercle.png" alt="Dotted Circle" class="dotted-circle">
+        <img [src]="restaurant.image" [alt]="restaurant.name" class="restaurant-image">
+      </div>
+      <h3 class="restaurant-name">{{ restaurant.name }}</h3>
+      <a href="#" class="view-menu">Voir Menu &gt;</a>
+    </div>
+  </div>
+
+  <!-- ✅ View All Button -->
+  <div class="view-all-container">
+    <button class="view-all-button">Voir tout les restaurants</button>
+  </div>
+</section>
+
+<!-- Category Bar Section (Placed Outside Dish Showcase) -->
+<!-- ✅ Category Bar Section -->
+<!-- ✅ Category Bar Section -->
+<section class="category-bar" [ngClass]="selectedTheme">
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="category-container" [ngClass]="selectedTheme">
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="category-track"  [ngClass]="selectedTheme">
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <span class="category-item">✦ Rajasthan ✦</span>
+      <span class="category-item">✦ South Indian ✦</span>
+      <span class="category-item">✦ Gujarat ✦</span>
+      <span class="category-item">✦ Maharashtra ✦</span>
+      <span class="category-item">✦ Rajasthan ✦</span>
+      <span class="category-item">✦ South Indian ✦</span>
+      <span class="category-item">✦ Gujarat ✦</span>
+      <span class="category-item">✦ Maharashtra ✦</span>
+      <!-- Duplicate items to create an infinite loop -->
+      <span class="category-item">✦ Rajasthan ✦</span>
+      <span class="category-item">✦ South Indian ✦</span>
+      <span class="category-item">✦ Gujarat ✦</span>
+      <span class="category-item">✦ Maharashtra ✦</span>
+      <span class="category-item">✦ Rajasthan ✦</span>
+      <span class="category-item">✦ South Indian ✦</span>
+      <span class="category-item">✦ Gujarat ✦</span>
+      <span class="category-item">✦ Maharashtra ✦</span>
+      <span class="category-item">✦ Rajasthan ✦</span>
+      <span class="category-item">✦ South Indian ✦</span>
+      <span class="category-item">✦ Gujarat ✦</span>
+      <span class="category-item">✦ Maharashtra ✦</span>
+      <span class="category-item">✦ Rajasthan ✦</span>
+      <span class="category-item">✦ South Indian ✦</span>
+      <span class="category-item">✦ Gujarat ✦</span>
+      <span class="category-item">✦ Maharashtra ✦</span>      <span class="category-item">✦ Rajasthan ✦</span>
+      <span class="category-item">✦ South Indian ✦</span>
+      <span class="category-item">✦ Gujarat ✦</span>
+      <span class="category-item">✦ Maharashtra ✦</span>
+      <span class="category-item">✦ Rajasthan ✦</span>
+      <span class="category-item">✦ South Indian ✦</span>
+      <span class="category-item">✦ Gujarat ✦</span>
+      <span class="category-item">✦ Maharashtra ✦</span>
+    </div>
+  </div>
+</section>

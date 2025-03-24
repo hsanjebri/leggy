@@ -1,0 +1,52 @@
+/* ✅ 1. Apply Grey Background to Everything */
+html, body {
+  background-color: #F5F5F7; /* 🔥 Full-page grey */
+  margin: 0; /* ✅ Removes default margin */
+  padding: 0;
+  width: 100%;
+  min-height: 100vh; /* ✅ Ensures full height coverage */
+  overflow-x: hidden; /* ✅ Prevents horizontal scrolling issues */
+}
+
+/* ✅ 2. Ensure Promo Section Spans Full Width */
+.promo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centered instead of space-between */
+  gap: 150px; /* ✅ Reduce space between left and right promo */
+  width: 100vw;
+  padding: 40px;
+  max-width: 100%;
+  margin: 0;
+  background-color: #F5F5F7;
+}
+
+
+/* ✅ 3. Fix Any Possible Parent Containers */
+.container, .wrapper, .main-content {
+  background-color: transparent !important; /* ✅ Makes sure no white backgrounds remain */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ✅ Left Promo - Adjusted to be responsive */
+.left-promo {
+  width: 600px;
+  height: 500px;
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+/* ✅ Right Promo - Now sits closer to the left promo */
+.right-promo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* ✅ Space between top and bottom right promo */
+}
+
+/* ✅ Right Promo Boxes Adjusted */
+.top-right, .bottom-right {
+  width: 600px;
+  height: 240px;
+  border-radius: 10px;
+}

@@ -1,0 +1,46 @@
+<section class="pizza-carousel">
+  <!-- Title -->
+  <h1 class="main-title">
+    Our <span class="highlight">Best Delivered</span> Dakar Dish
+  </h1>
+
+  <br><br><br><br>
+
+  <!-- Carousel Wrapper -->
+  <div class="carousel-container">
+
+    <!-- Left Button -->
+    <button class="carousel-btn left" (click)="prevPizza()">&#8592;</button>
+
+    <!-- Side Pizzas (Left) -->
+    <div class="side-pizzas left">
+      <img *ngFor="let pizza of getLeftSidePizzas()" [src]="pizza.image" class="side-pizza" alt="">
+    </div>
+
+    <!-- Center Pizza Card -->
+    <div class="pizza-card">
+      <div class="pizza-image-container">
+        <img src="/assets/dotedcercle.png" class="dotted-circle">
+        <img [src]="currentPizza.image" [alt]="currentPizza.name" class="pizza-image">
+      </div>
+      <h3 class="pizza-name">{{ currentPizza.name }}</h3>
+      <a href="#" class="order-link">Order Now &gt;</a>
+    </div>
+
+    <!-- Side Pizzas (Right) -->
+    <div class="side-pizzas right">
+      <img *ngFor="let pizza of getRightSidePizzas()" [src]="pizza.image" class="side-pizza">
+    </div>
+
+    <!-- Right Button -->
+    <button class="carousel-btn right" (click)="nextPizza()">&#8594;</button>
+  </div>
+
+  <!-- ✅ "Voir tout les Plats" Button -->
+  <div class="view-all-container">
+    <button class="view-all-button">Voir tout les Plats</button>
+  </div><div class="image-container">
+  <img src="/assets/plat_prefere.png" alt="Delicious Food" class="expanded-image">
+</div>
+
+</section>

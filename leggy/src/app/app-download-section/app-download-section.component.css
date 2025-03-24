@@ -1,0 +1,276 @@
+/* ✅ Overall Section */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap');
+
+.app-download {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 100px;
+  background-color: #fff;
+}
+
+/* ✅ Text Content */
+.app-content {
+  max-width: 50%;
+}
+/* ✅ Apply Lexend Font */
+body {
+  font-family: 'Lexend', sans-serif;
+}
+
+/* ✅ Subtitle (Orange Text) */
+.app-subtitle {
+  font-family: 'Lexend', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FF8500;
+}
+
+/* ✅ Main Title */
+.app-title {
+  font-family: 'Lexend', sans-serif;
+  font-size: 28px;
+  font-weight: 700; /* Bold */
+  color: #212121;
+  margin-top: 10px;
+}
+
+/* ✅ Benefits List */
+.app-benefits {
+  font-family: 'Lexend', sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+/* ✅ Bullet Point List Items */
+.app-benefits li {
+  font-family: 'Lexend', sans-serif;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+
+/* ✅ Custom Bullet with Orange Circle and White Dot */
+.app-benefits li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px; /* 🔥 Outer Circle Size */
+  height: 16px;
+  background-color: #FF8500; /* 🔥 Outer Orange Circle */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Inner White Dot */
+.app-benefits li::after {
+  content: "";
+  position: absolute;
+  left: 5px; /* Adjust position inside the circle */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px; /* 🔥 Inner White Dot Size */
+  height: 6px;
+  background-color: white; /* 🔥 Inner White Dot */
+  border-radius: 50%;
+}
+
+/* ✅ Download Buttons */
+.app-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+/* ✅ Button Styling */
+.google-play,
+.app-store {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* 🔥 Space between icon and text */
+  background-color: #FF8500;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 220px; /* 🔥 Set a fixed width for consistency */
+}
+
+.app-store {
+  background-color: black;
+}
+
+/* ✅ Hover Effects */
+.google-play:hover {
+  background-color: #e07900;
+}
+
+.app-store:hover {
+  background-color: #333;
+}
+
+/* ✅ Icons */
+/* ✅ Convert Icons to White */
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* 🔥 Converts black to white */
+}
+
+
+
+/* ✅ Images */
+.app-images {
+  position: relative;
+  max-width: 50%;
+}
+
+.delivery-image {
+  width: 320px;
+  position: absolute;
+  left: -280px;
+  bottom: -20px;
+}
+
+.phone-image {
+  width: 250px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .app-download {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .app-content {
+    max-width: 100%;
+  }
+
+  .app-images {
+    margin-top: 30px;
+  }
+
+  .delivery-image {
+    left: 0;
+  }
+}
+/**************************************************/
+/* ✅ Carousel Wrapper */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* ✅ Slide Images */
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+  width: 100%;
+  flex-shrink: 0;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* ✅ Navigation Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 46%;
+  transform: translateY(-48%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-arrow.left {
+  left: 15px;
+}
+
+.carousel-arrow.right {
+  right: 50px;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* ✅ Dots Navigation */
+.carousel-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.carousel-dots span {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background: #bbb;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dots .active {
+  background: #ff8500;
+}
+
+/* ✅ Text Overlay */
+.carousel-text {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-text h2 {
+  font-size: 40px;
+}
+
+.carousel-text p {
+  font-size: 18px;
+}
+
+.learn-more {
+  background: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-top: 10px;
+}

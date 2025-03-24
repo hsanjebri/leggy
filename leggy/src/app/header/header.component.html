@@ -1,1 +1,42 @@
-<p>header works!</p>
+<!-- ✅ Ensure the theme class is applied to the wrapper -->
+<div class="header-wrapper" [ngClass]="selectedTheme">
+  <div class="top-bar">
+    <span>Nous assurons une livraison rapide tout en garantissant un service de qualité</span>
+    <div class="top-links">
+      <a routerLink="#">Restaurants proches</a>
+      <a routerLink="#">Suivi colis</a>
+      <a routerLink="#">FAQs</a>
+      <div class="language-dropdown">
+        <button class="dropbtn">Français <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-content">
+          <a href="#">English</a>
+          <a href="#">Español</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Navbar also gets the theme class -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-text">Logo <span class="highlight">Legy</span></span>
+    </div>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a routerLink="#">Plats traditionnels <i class="fas fa-chevron-down"></i></a>
+      </li>
+      <li class="dropdown">
+        <a routerLink="#">Fast Food <i class="fas fa-chevron-down"></i></a>
+      </li>
+      <li class="dropdown">
+        <a routerLink="#">Repas sains & équilibrés <i class="fas fa-chevron-down"></i></a>
+      </li>
+      <li class="dropdown">
+        <a routerLink="#">Boissons & Desserts <i class="fas fa-chevron-down"></i></a>
+      </li>
+      <li class="dropdown">
+        <a routerLink="#">Localisation des restaurants <i class="fas fa-chevron-down"></i></a>
+      </li>
+    </ul>
+  </nav>
+</div>

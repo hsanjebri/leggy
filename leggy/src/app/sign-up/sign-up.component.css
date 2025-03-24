@@ -41,11 +41,39 @@
 }
 
 /* Input Fields */
+/* Input Fields */
 .mat-form-field {
-  width: 100%;
+  width: 60% !important; /* Reduce width */
+  max-width: 200px !important; /* Set a smaller max width */
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 10px; /* Less space between inputs */
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.mat-form-field-wrapper {
+  padding: 5px; /* Reduce padding */
+}
+
+.mat-input-element {
+  font-size: 14px; /* Smaller font */
+  padding: 8px 10px; /* Reduce padding */
+  width: 50%;
+  max-width: 200px !important; /* Ensure smaller width */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Adjust Icons */
+.material-icons-outlined {
+  font-size: 18px !important; /* Make icons smaller */
+  cursor: pointer;
+}
+
+
 
 .example-full-width {
   width: 100%;
@@ -58,10 +86,16 @@
 
 .mat-input-element {
   font-size: 16px;
-  padding: 15px;
+  padding: 10px 12px;
   width: 100%;
+  max-width: 250px !important; /* Force a smaller width */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  outline: none;
   box-sizing: border-box;
 }
+
 
 /* Icons */
 .material-icons-outlined {

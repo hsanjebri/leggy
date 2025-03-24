@@ -1,0 +1,480 @@
+/* ✅ Overall Showcase Container */
+.dish-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #F5F5F7;
+  width: 100%;
+}
+
+/* ✅ Header Section (Title + Subtext in the same row) */
+.dish-showcase-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* ✅ Title Section */
+.text-container {
+  flex: 1;
+}
+
+.main-title {
+  font-family: 'Lexend', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #502314;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #FF8500;
+}
+
+/* ✅ Subtext Section */
+.subtext-container {
+  flex: 1;
+  text-align: right;
+}
+
+.subtext {
+  font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #B3B3B3;
+}
+
+/* ✅ Dish Cards Layout */
+.dish-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* 🔥 Increased gap for better spacing */
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 40px;
+}
+
+/* ✅ Dish Card */
+.dish-card {
+  width: 160px; /* 🔥 Slightly increased for better balance */
+  height: 140px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+/* ✅ Image & Circular Border (Moves the image out of the card) */
+.dish-image-container {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px; /* 🔥 Increased for better focus */
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dotted-circle {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+}
+
+.dish-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ✅ Text Inside Cards */
+.dish-name {
+  font-size: 15px;
+  font-weight: bold;
+  color: #2E2E2E;
+  margin-top: 25px;
+}
+
+.order-link {
+  font-size: 13px;
+  color: #FF8500;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ✅ Responsive for Smaller Screens */
+@media (max-width: 768px) {
+  .dish-showcase-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .subtext-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .dish-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dish-card {
+    width: 90%;
+    max-width: 220px;
+  }
+}
+
+/* ✅ Ensure Full Width & Height */
+.category-bar {
+  width: 100%;
+  padding: 30px 0; /* Adjust padding */
+  height: 100px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* ✅ Ensure Container Fills Entire Space */
+.category-container {
+  width: 100%;
+  height: 160%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Make the Track Take Full Width */
+/* ✅ Ensure the track is wide enough to loop properly */
+.category-track {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  white-space: nowrap;
+  width: 400%; /* Increase width to allow infinite looping */
+  animation: scrollInfinite 15s linear infinite;
+}
+
+/* ✅ Infinite Scroll Animation */
+@keyframes scrollInfinite {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* Move only 50% to create seamless effect */
+  }
+}
+
+
+/* ✅ Ensure Items are Centered */
+.category-item {
+  font-family: 'Lexend', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  padding: 0 60px;
+  line-height: 1.8;
+}
+
+/* ✅ Apply Theme to the Whole Band */
+.orange-theme .category-bar,
+.orange-theme .category-container,
+.orange-theme .category-track {
+  background-color: #FF8500 !important;
+}
+
+.red-theme .category-bar,
+.red-theme .category-container,
+.red-theme .category-track {
+  background-color: #D32701 !important;
+}
+
+.green-theme .category-bar,
+.green-theme .category-container,
+.green-theme .category-track {
+  background-color: #5CAC0E !important;
+}
+
+.blue-theme .category-bar,
+.blue-theme .category-container,
+.blue-theme .category-track {
+  background-color: #0056b3 !important;
+}
+
+/* ✅ Fix Any Border Overlaps */
+.category-container,
+.category-track {
+  border: none !important;
+}
+
+/* ✅ Infinite Scroll Animation */
+@keyframes scrollInfinite {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* ✅ Restaurant Showcase Section */
+.restaurant-showcase {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+.restaurant-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #502314;
+  margin-bottom: 30px;
+}
+
+.restaurant-title .highlight {
+  color: #FF8500;
+}
+
+/* ✅ Restaurant Cards */
+.restaurant-cards {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.restaurant-card {
+  width: 160px;
+  height: 130px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+/* ✅ Image & Circular Border */
+.restaurant-image-container {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dotted-circle {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+}
+
+.restaurant-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ✅ Text Inside Cards */
+.restaurant-name {
+  font-size: 15px;
+  font-weight: bold;
+  color: #2E2E2E;
+  margin-top: 25px;
+}
+
+.view-menu {
+  font-size: 13px;
+  color: #FF8500;
+  margin: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ✅ View All Button */
+.view-all-container {
+  margin-top: 30px;
+}
+
+.view-all-button {
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-all-button:hover {
+  background-color: #3e8e41;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .restaurant-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .restaurant-card {
+    width: 90%;
+    max-width: 220px;
+  }
+
+  :host-context(.orange-theme) .category-bar {
+    background-color: #FF8500 !important;
+  }
+
+  :host-context(.red-theme) .category-bar {
+    background-color: #D32701 !important;
+  }
+
+  :host-context(.green-theme) .category-bar {
+    background-color: #5CAC0E !important;
+  }
+
+  :host-context(.blue-theme) .category-bar {
+    background-color: #0056b3 !important;
+  }
+
+
+
+} addthe final part to my css file this is the final part /* ✅ Scoped Background Animation - Only for .category-bar */
+  .category-bar .area,
+  .category-container .area,
+  .category-track .area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Remove gradient to let theme-specific background take over */
+    /* background: linear-gradient(to left, #FF6000, #FFA500, #FF4500); */
+  }
+
+/* ✅ Floating Circles */
+.category-bar .circles,
+.category-container .circles,
+.category-track .circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.category-bar .circles li,
+.category-container .circles li,
+.category-track .circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: 0; /* Start at the bottom of the category bar */
+}
+
+/* ✅ Increased Number of Circles (20 Circles) */
+.category-bar .circles li:nth-child(1),
+.category-container .circles li:nth-child(1),
+.category-track .circles li:nth-child(1) { left: 5%; width: 80px; height: 80px; animation-delay: 0s; }
+.category-bar .circles li:nth-child(2),
+.category-container .circles li:nth-child(2),
+.category-track .circles li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
+.category-bar .circles li:nth-child(3),
+.category-container .circles li:nth-child(3),
+.category-track .circles li:nth-child(3) { left: 15%; width: 30px; height: 30px; animation-delay: 4s; }
+.category-bar .circles li:nth-child(4),
+.category-container .circles li:nth-child(4),
+.category-track .circles li:nth-child(4) { left: 20%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
+.category-bar .circles li:nth-child(5),
+.category-container .circles li:nth-child(5),
+.category-track .circles li:nth-child(5) { left: 25%; width: 40px; height: 40px; animation-delay: 1s; }
+.category-bar .circles li:nth-child(6),
+.category-container .circles li:nth-child(6),
+.category-track .circles li:nth-child(6) { left: 30%; width: 110px; height: 110px; animation-delay: 3s; }
+.category-bar .circles li:nth-child(7),
+.category-container .circles li:nth-child(7),
+.category-track .circles li:nth-child(7) { left: 35%; width: 150px; height: 150px; animation-delay: 7s; }
+.category-bar .circles li:nth-child(8),
+.category-container .circles li:nth-child(8),
+.category-track .circles li:nth-child(8) { left: 40%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
+.category-bar .circles li:nth-child(9),
+.category-container .circles li:nth-child(9),
+.category-track .circles li:nth-child(9) { left: 45%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; }
+.category-bar .circles li:nth-child(10),
+.category-container .circles li:nth-child(10),
+.category-track .circles li:nth-child(10) { left: 50%; width: 50px; height: 50px; animation-delay: 0s; animation-duration: 11s; }
+.category-bar .circles li:nth-child(11),
+.category-container .circles li:nth-child(11),
+.category-track .circles li:nth-child(11) { left: 55%; width: 70px; height: 70px; animation-delay: 5s; }
+.category-bar .circles li:nth-child(12),
+.category-container .circles li:nth-child(12),
+.category-track .circles li:nth-child(12) { left: 60%; width: 30px; height: 30px; animation-delay: 3s; animation-duration: 20s; }
+.category-bar .circles li:nth-child(13),
+.category-container .circles li:nth-child(13),
+.category-track .circles li:nth-child(13) { left: 65%; width: 90px; height: 90px; animation-delay: 8s; }
+.category-bar .circles li:nth-child(14),
+.category-container .circles li:nth-child(14),
+.category-track .circles li:nth-child(14) { left: 70%; width: 20px; height: 20px; animation-delay: 6s; animation-duration: 15s; }
+.category-bar .circles li:nth-child(15),
+.category-container .circles li:nth-child(15),
+.category-track .circles li:nth-child(15) { left: 75%; width: 40px; height: 40px; animation-delay: 2s; }
+.category-bar .circles li:nth-child(16),
+.category-container .circles li:nth-child(16),
+.category-track .circles li:nth-child(16) { left: 80%; width: 60px; height: 60px; animation-delay: 4s; animation-duration: 25s; }
+.category-bar .circles li:nth-child(17),
+.category-container .circles li:nth-child(17),
+.category-track .circles li:nth-child(17) { left: 85%; width: 100px; height: 100px; animation-delay: 9s; }
+.category-bar .circles li:nth-child(18),
+.category-container .circles li:nth-child(18),
+.category-track .circles li:nth-child(18) { left: 90%; width: 25px; height: 25px; animation-delay: 12s; animation-duration: 30s; }
+.category-bar .circles li:nth-child(19),
+.category-container .circles li:nth-child(19),
+.category-track .circles li:nth-child(19) { left: 95%; width: 15px; height: 15px; animation-delay: 3s; animation-duration: 40s; }
+.category-bar .circles li:nth-child(20),
+.category-container .circles li:nth-child(20),
+.category-track .circles li:nth-child(20) { left: 98%; width: 50px; height: 50px; animation-delay: 1s; animation-duration: 13s; }
+
+/* ✅ Floating Animation */
+@keyframes animate {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 0; }
+  100% { transform: translateY(-200px) rotate(720deg); opacity: 0; border-radius: 50%; }
+}

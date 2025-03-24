@@ -1,1 +1,43 @@
-<p>hero-section works!</p>
+  <section class="hero-section" [ngClass]="selectedTheme">
+    <!-- ✅ Left Content -->
+    <div class="hero-content">
+      <h3 class="hero-subtitle">MEILLEURES VENTES DE LA SEMAINE</h3>
+
+      <!-- 🟢 Typewriter Effect -->
+      <h1 class="hero-title">
+        <span id="static-text">Choisissez Votre </span>
+        <span id="typewriter">{{ typewriterText }}</span><span class="cursor">|</span>
+      </h1>
+
+      <p class="hero-description">
+        La présentation compte. Nos plats savoureux sont aussi beaux que délicieux.
+      </p>
+      <br><br>
+
+      <!-- ✅ Dynamic Categories Using *ngFor -->
+      <!-- ✅ Dynamic Categories Using *ngFor -->
+      <div class="categories">
+        <div class="category" *ngFor="let category of categories" (click)="changeTheme(category.theme, category.name)">
+          <div [class]="category.bgClass">
+            <!-- ✅ Circle Border -->
+            <div class="circle-border" [class]="category.borderColor">
+              <img [src]="category.image" [alt]="category.name" class="plate-img">
+            </div>
+            <span class="plate-text" [ngClass]="category.textColor">{{ category.name }}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ✅ Right Side - Hero Image -->
+    <div class="hero-image">
+      <div class="orange-rectangle"></div>
+      <div class="orange-ellipse"></div> <!-- 🔥 The Dotted Circle Will Change -->
+      <img src="/assets/plat.png"
+           alt="Delicious Food"
+           class="plate-image"
+           [style.transform]="'rotate(' + rotationAngle + 'deg)'" />
+
+    </div>
+  </section>

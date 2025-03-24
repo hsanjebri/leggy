@@ -1,0 +1,72 @@
+/* ✅ Delivery Features Section */
+.delivery-features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  padding: 40px; /* Increased padding for more height */
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px; /* Increased width */
+  min-height: 80px; /* Added minimum height to expand vertically */
+  margin: 30px auto;
+}
+/* ✅ Individual Feature Box */
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+}
+
+/* ✅ Feature Icon */
+.feature-icon {
+  width: 50px; /* Adjust icon size */
+  height: auto;
+}
+
+/* ✅ Feature Text */
+.feature-text h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2E2E2E;
+  margin: 0;
+}
+
+.feature-text p {
+  font-size: 14px;
+  color: #7A7A7A;
+  margin: 0;
+}
+body {
+  background-color: #F5F5F5; /* Grey background for the page */
+  margin: 0;
+  padding: 0;
+}
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .delivery-features {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .feature {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .feature-icon {
+    width: 60px;
+  }
+
+  .feature-text h3 {
+    font-size: 20px;
+  }
+
+  .feature-text p {
+    font-size: 16px;
+  }
+}

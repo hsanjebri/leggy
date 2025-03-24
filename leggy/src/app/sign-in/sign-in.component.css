@@ -46,11 +46,18 @@
 }
 
 /* Input Fields - Explicitly Stacked Vertically */
-.mat-form-field {
-  width: 100%;
-  display: block;
-  margin-bottom: 25px;
+.mat-input-element {
+  font-size: 16px;
+  padding: 12px 15px;
+  width: 60%;
+  max-width: 100px !important; /* Set the max width */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  outline: none;
+  box-sizing: border-box;
 }
+
 
 /* Ensure form fields don't align horizontally */
 .example-full-width {

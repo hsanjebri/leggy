@@ -1,1 +1,59 @@
-<p>app-download-section works!</p>
+<section class="app-download">
+  <div class="app-content">
+    <h4 class="app-subtitle">MEILLEURE APPLICATION POUR COMMANDER DES PLATS.</h4>
+    <h1 class="app-title">Téléchargez l’app pour voir votre plat en réalité augmentée !</h1>
+
+    <ul class="app-benefits">
+      <li>Portée maximale - Effort minimal</li>
+      <li>Mettez en avant votre marque</li>
+      <li>Offres exclusives et réductions</li>
+    </ul>
+
+
+
+
+    <!-- ✅ Download Buttons -->
+    <div class="app-buttons">
+      <button class="google-play">
+        <img src="/assets/google-play-icon.png" alt="Google Play Icon" class="btn-icon">
+        <span>Google Play</span>
+      </button>
+
+      <button class="app-store">
+        <img src="/assets/app-store-icon.png" alt="App Store Icon" class="btn-icon">
+        <span>App Store</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ✅ Right Side: Illustration & Phone Image -->
+  <div class="app-images">
+    <img src="/assets/delivery-rider.png" alt="Livraison" class="delivery-image">
+    <img src="/assets/phone-mockup.png" alt="App Preview" class="phone-image">
+  </div>
+</section>
+
+
+<div class="carousel">
+  <!-- Slide Images -->
+  <div class="carousel-slide" [style.transform]="'translateX(' + (-currentIndex * 100) + '%)'">
+    <img *ngFor="let image of images" [src]="image.src" [alt]="image.alt" class="carousel-image">
+  </div>
+
+  <!-- Left Arrow -->
+  <button class="carousel-arrow left" (click)="prevSlide()">&#10094;</button>
+
+  <!-- Right Arrow -->
+  <button class="carousel-arrow right" (click)="nextSlide()">&#10095;</button>
+
+  <!-- Dots Navigation -->
+  <div class="carousel-dots">
+    <span *ngFor="let img of images; let i = index"
+          [class.active]="i === currentIndex"
+          (click)="goToSlide(i)">
+    </span>
+  </div>
+
+  <!-- Offer Text Overlay -->
+
+</div>

@@ -1,1 +1,11 @@
-<app-sign-in></app-sign-in>
+<div [ngClass]="selectedTheme">
+
+  <app-header [selectedTheme]="selectedTheme"></app-header>
+  <app-hero-section (themeChange)="changeTheme($event)"></app-hero-section>
+</div>
+<app-restaurant-stories></app-restaurant-stories>
+<app-dish-showcase [selectedTheme]="selectedTheme"></app-dish-showcase>
+<app-pizza-carousel-component></app-pizza-carousel-component>
+<app-app-download-section></app-app-download-section>
+<app-footer></app-footer>
+

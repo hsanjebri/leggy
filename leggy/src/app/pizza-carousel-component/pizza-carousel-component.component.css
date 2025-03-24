@@ -1,0 +1,267 @@
+/* ✅ Overall Carousel Styling */
+.pizza-carousel {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #F5F5F7;
+  position: relative;
+}
+
+/* ✅ Carousel Layout */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ✅ Navigation Buttons */
+.carousel-btn {
+  background: none;  /* 🚀 Remove background */
+  border: none;  /* ❌ Remove border */
+  font-size: 28px; /* 🔥 Make arrow bigger */
+  color: black; /* Make sure arrow is visible */
+  cursor: pointer;
+  box-shadow: none; /* ❌ Remove shadow */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.carousel-btn.left {
+  left: 5%;
+}
+
+.carousel-btn.right {
+  right: 5%;
+}
+
+/* ✅ Side Pizzas Layout */
+.side-pizzas {
+  display: flex;
+  gap: 10px; /* Spacing between side pizzas */
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* ✅ Positioning Left and Right Side Pizzas */
+.side-pizzas.left {
+  left: 20%;
+  justify-content: flex-end;
+}
+
+.side-pizzas.right {
+  right: 20%;
+  justify-content: flex-start;
+}
+
+/* ✅ Side Pizza Styles */
+.side-pizza {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 🔥 Left side FIX - Switch the two pizzas */
+.side-pizzas.left .side-pizza:nth-child(1) {
+  transform: translateY(0px);  /* 🔽 Lower one */
+}
+
+.side-pizzas.left .side-pizza:nth-child(2) {
+  transform: translateY(-35px);  /* 🔼 Higher one */
+}
+
+/* ✅ Right side stays the same */
+.side-pizzas.right .side-pizza:nth-child(1) {
+  transform: translateY(-35px); /* 🔼 Raised by 35px */
+}
+
+.side-pizzas.right .side-pizza:nth-child(2) {
+  transform: translateY(0px); /* 🔽 Normal position */
+}
+
+/* ✅ Hover Effect */
+.side-pizza:hover {
+  transform: scale(1.1) translateY(-20px);
+  opacity: 1;
+}
+
+/* ✅ Center Pizza Card */
+.pizza-card {
+  width: 140px;
+  height: 180px;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+}
+
+/* ✅ Dotted Circle & Image */
+/* ✅ Dotted Circle & Pizza Image Container */
+.pizza-image-container {
+  position: relative;
+  width: 160px; /* Match the dotted circle size */
+  height: 160px;
+  margin: 0 auto; /* Center it horizontally */
+  margin-top: -70px; /* Control vertical position */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -30px; /* Adjust this value as needed */
+
+}
+
+
+/* ✅ Dotted Circle */
+.dotted-circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+}
+
+.pizza-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+
+.pizza-card:hover .pizza-image {
+  transform: scale(1.05);
+}
+
+/* ✅ Pizza Name */
+.pizza-name {
+  font-size: 18px;
+  color: #2E2E2E;
+  margin-top: 30px; /* 🔥 Increase margin to push it down */
+}
+
+
+/* ✅ Order Link */
+.order-link {
+  font-size: 16px;
+  color: #FF8500;
+  text-decoration: none;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .carousel-container {
+    flex-direction: column;
+  }
+
+  .side-pizzas {
+    gap: 8px;
+  }
+
+  .side-pizzas.left {
+    left: 15%;
+  }
+
+  .side-pizzas.right {
+    right: 15%;
+  }
+
+  .carousel-btn {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .pizza-card {
+    width: 220px;
+  }
+
+  .side-pizza {
+    width: 70px;
+    height: 70px;
+  }
+
+
+}
+/* ✅ View All Button Container */
+.view-all-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ✅ Button Style */
+.view-all-button {
+  background-color: #4CAF50; /* ✅ Green */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  width: 20%;
+
+  padding: 12px 24px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+/* ✅ Hover Effect */
+.view-all-button:hover {
+  background-color: #3e8e41;
+  transform: scale(1.05);
+}
+
+/* ✅ Responsive for Smaller Screens */
+@media (max-width: 768px) {
+  .view-all-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+/* ✅ Image Container */
+.image-container {
+  width: 100%; /* Ensure full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; /* Space between elements */
+}
+
+/* ✅ Expand Image */
+.expanded-image {
+  width: 100%; /* Make it take most of the screen */
+  max-width: 1200px; /* Ensure it doesn't get too large */
+  border-radius: 0px; /* Maintain the rounded style */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  object-fit: cover; /* Ensure it expands without distortion */
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .expanded-image {
+    width: 95%; /* Make it take more space on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .expanded-image {
+    width: 100%; /* Full width for mobile */
+    border-radius: 10px; /* Reduce rounding on smaller screens */
+  }
+}
